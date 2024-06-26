@@ -19,6 +19,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				knewave: ["Knewave", "system-ui"],
+				oswald: ["Oswald", "sans-serif"],
 			},
 			colors: {
 				border: "hsl(var(--border))",

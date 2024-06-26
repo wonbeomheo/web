@@ -9,7 +9,8 @@ const Layout = ({children}: Props) => {
         <div className="flex flex-col">
             <Header />
             <div className="container flex-1 py-10 min-h-fit">{children}</div>
-            <div className="bg-black py-8 flex justify-center items-center text-white">down arrow</div>
+            <div className="bg-black py-8 flex justify-center items-center text-white">
+            </div>
         </div>
     )
     
