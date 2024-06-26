@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
     const [menuOn, setMenuOn] = useState(false);
@@ -11,10 +12,12 @@ const Header = () => {
                     className="container flex-col mx-auto text-white"
                 >
                     <div 
-                        className="flex justify-center item-center"
+                        className="flex justify-between md:justify-center item-center"
                         onMouseEnter={() => {setMenuOn(() => {return true;});}}
                     >
+                        <div className="flex w-6 md:hidden"></div>
                         <Link className="text-4xl md:text-5xl font-knewave py-8" to="/">RYAN</Link>
+                        <div className="flex align-middle md:hidden"><MobileNav/></div>
                     </div>
                 </div>
             </div>
