@@ -9,7 +9,7 @@ type Props = {
     company: string,
 }
 
-const Event = ({title, fromYear, fromMonth, toYear, toMonth, description, current=false, company}: Props) => {
+const TimelineEvent = ({title, fromYear, fromMonth, toYear, toMonth, description, current=false, company}: Props) => {
     return (
         <div className="flex font-oswald">
             <div className="inset-0 hidden md:flex">
@@ -42,4 +42,4 @@ const Event = ({title, fromYear, fromMonth, toYear, toMonth, description, curren
     );
 }
 
-export default Event;
+export default TimelineEvent;
