@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
@@ -25,10 +26,10 @@ const Header = () => {
                 className={`hidden md:flex overflow-hidden`}
             >
                 <div className={`flex pb-8 min-w-full text-white text-xl font-oswald bg-black container mx-auto justify-around item-center duration-150${menuOn? "" : " -translate-y-20"}`}>
-                    <a className="content-center" href="#about">About</a>
-                    <a className="content-center" href="#skills">Skills</a>
-                    <a className="content-center" href="#projects">Projects</a>
-                    <a className="content-center" href="#contact">Contact</a>
+                    <ScrollLink to="about" spy={true} smooth={true} duration={500}>About</ScrollLink>
+                    <ScrollLink to="skills" spy={true} smooth={true} duration={500}>Skills</ScrollLink>
+                    <ScrollLink to="projects" spy={true} smooth={true} duration={500}>Projects</ScrollLink>
+                    <ScrollLink to="contact" spy={true} smooth={true} duration={500}>Contact</ScrollLink>
                 </div>
             </div>
         </div>
