@@ -1,6 +1,7 @@
 import Header from "../components/custom/Header";
 import downArrow from "../assets/arrow-down.svg"
 import About from "../components/custom/About";
+import Skills from "../components/custom/Skills";
 import { Link } from "react-scroll";
 
 type Props = {
@@ -18,6 +19,7 @@ const Layout = ({children}: Props) => {
                 </Link>
             </div>
             <About />
+            <Skills />
         </div>
     )
     

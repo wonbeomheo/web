@@ -1,6 +1,6 @@
 import main from "../../assets/main.png";
 
-const Landing = () => {
+const Hero = () => {
     return (
         <div className="flex justify-center">
             <img className="scale-75 md:scale-100" src={main} alt="Ryan and his family" />
@@ -9,4 +9,4 @@ const Landing = () => {
     );
 }
 
-export default Landing
+export default Hero

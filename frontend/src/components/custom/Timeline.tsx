@@ -4,7 +4,7 @@ import TimelineEvent from './TimelineEvent';
 const Timeline = () => {
     return (
         <div className="flex">
-            <ScrollArea className="w-96 h-96 md:w-[500px] md:h-[600px]" scrollHideDelay={0}>
+            <ScrollArea className="w-96 max-h-96 md:w-[500px] md:h-[600px]" scrollHideDelay={0}>
                 <TimelineEvent 
                     title="Junior Software Developer" fromYear={2022} fromMonth={5} 
                     toYear={2024} toMonth={6} current={true} description={''} company='ClassAct'
