@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Separator } from "../ui/separator";
 import Timeline from "./Timeline";
 
 const About = () => {
