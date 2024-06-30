@@ -14,23 +14,27 @@ const AdminLayout = ({children}: Props) => {
                 <NavigationMenu 
                     className="flex-col min-w-full mt-32 list-none"
                 >
-                    <NavigationMenuItem 
-                        className="w-full p-4 my-2 hover:bg-red-800 ease-in-out duration-500"
-                    >
-                        <Link to="skills">
+                    <Link to="skills" className="min-w-full">
+                        <NavigationMenuItem 
+                            className="p-4 my-2 hover:bg-red-800 ease-in-out duration-500"
+                        >
                             <NavigationMenuLink className="">Skills</NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem className="w-full p-4 my-2 hover:bg-red-800 ease-in-out duration-500">
-                        <Link to="projects">
+                        </NavigationMenuItem>
+                    </Link>
+                    <Link to="projects" className="min-w-full">
+                        <NavigationMenuItem 
+                            className="p-4 my-2 hover:bg-red-800 ease-in-out duration-500"
+                        >
                             <NavigationMenuLink className="">Projects</NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem className="w-full p-4 my-2 hover:bg-red-800 ease-in-out duration-500">
-                        <Link to="contact">
+                        </NavigationMenuItem>
+                    </Link>
+                    <Link to="contact" className="min-w-full">
+                        <NavigationMenuItem 
+                            className="p-4 my-2 hover:bg-red-800 ease-in-out duration-500"
+                        >
                             <NavigationMenuLink className="">Contact</NavigationMenuLink>
-                        </Link>
-                    </NavigationMenuItem>
+                        </NavigationMenuItem>
+                    </Link>
                 </NavigationMenu>
             </div>
             <div className="w-full">{children}</div>
