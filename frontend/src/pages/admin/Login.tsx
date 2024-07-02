@@ -22,7 +22,7 @@ const Login = () => {
     const {loginWithRedirect } = useAuth0();
     
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex h-screen w-screen justify-center items-center bg-black">
             <Card className="w-96 h-[300px] bg-gradient-to-b from-black/50 to-black/80 border-0 text-white font-oswald text-2xl mt-32">
                 <CardHeader>
                     <CardTitle>
@@ -30,13 +30,13 @@ const Login = () => {
                     </CardTitle>
                     <CardDescription></CardDescription>
                 </CardHeader> 
+                <CardContent className="flex justify-center items-center">
                     <Button
+                        size="lg"
                         onClick={async () => {
                             await loginWithRedirect();
                         }}
                     >Login</Button>
-                <CardContent>
-
                 </CardContent>
             </Card>
         </div>
