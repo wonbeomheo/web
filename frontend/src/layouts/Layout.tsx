@@ -3,6 +3,7 @@ import downArrow from "../assets/arrow-down.svg"
 import About from "../components/custom/About";
 import Skills from "../components/custom/Skills";
 import { Link } from "react-scroll";
+import Projects from "../components/custom/Projects";
 
 type Props = {
     children: React.ReactNode;
@@ -20,6 +21,7 @@ const Layout = ({children}: Props) => {
             </div>
             <About />
             <Skills />
+            <Projects />
         </div>
     )
     

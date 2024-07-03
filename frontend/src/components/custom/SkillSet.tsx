@@ -16,7 +16,7 @@ const SkillSet = ({name, skills}: Props) => {
             <CardContent>
                 {
                     skills.map((value:string):React.ReactNode => {
-                        return <Skill name={value}/>;
+                        return <Skill key={value} name={value}/>;
                     })
                 }
             </CardContent>

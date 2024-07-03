@@ -1,5 +1,5 @@
 import React from "react";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, navigationMenuTriggerStyle } from "../components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink } from "../components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
 type Props = {
