@@ -4,6 +4,7 @@ import About from "../components/custom/About";
 import Skills from "../components/custom/Skills";
 import { Link } from "react-scroll";
 import Projects from "../components/custom/Projects";
+import Contact from "../components/custom/Contact";
 
 type Props = {
     children: React.ReactNode;
@@ -22,6 +23,7 @@ const Layout = ({children}: Props) => {
             <About />
             <Skills />
             <Projects />
+            <Contact />
         </div>
     )
     
