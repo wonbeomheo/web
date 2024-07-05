@@ -5,6 +5,7 @@ import Skills from "../components/custom/Skills";
 import { Link } from "react-scroll";
 import Projects from "../components/custom/Projects";
 import Contact from "../components/custom/Contact";
+import ToolGroup from "../components/custom/ToolGroup";
 
 type Props = {
     children: React.ReactNode;
@@ -24,6 +25,7 @@ const Layout = ({children}: Props) => {
             <Skills />
             <Projects />
             <Contact />
+            <ToolGroup/>
         </div>
     )
     
