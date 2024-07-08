@@ -4,25 +4,24 @@ import { useEffect, useState } from "react";
 
 
 const ToolGroup = () => {
-    const [ isVisible, setIsVisible ] = useState();
-    const [ height, setHeight ] = useState();
+    const [ isVisible, setIsVisible ] = useState<boolean | null>();
+    const [ height, setHeight ] = useState<number | null>();
     
     const scrollToTopSmooth = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    const listenToScroll = () => {
-        const heightToHide = document.getElementById('about')?.scrollHeight;
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const listenToScroll = ():void => {
+        const heightToHide:number|undefined = document.getElementById('about')?.scrollHeight;
+        const winScroll:number = document.body.scrollTop || document.documentElement.scrollTop;
         setHeight(winScroll);
 
-        console.log("winScroll: " + winScroll);
-        console.log("heightToHide: " + heightToHide);
-        
-        if ( winScroll > heightToHide ) {
-            setIsVisible(true);
-        } else {
-            isVisible && setIsVisible(false);
+        if (typeof(heightToHide) !== 'undefined') {
+            if ( winScroll > heightToHide ) {
+                setIsVisible(true);
+            } else {
+                isVisible && setIsVisible(false);
+            }
         }
     }
 

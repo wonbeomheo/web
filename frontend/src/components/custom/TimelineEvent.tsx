@@ -1,44 +1,39 @@
+import horizontalTimeline from "../../assets/horizontal-timeline.svg";
+import verticalTimeline from "../../assets/vertical-timeline.svg";
+
 type Props = {
     title: string,
     fromYear: number,
     fromMonth?: number,
     toYear?: number,
     toMonth?: number,
-    description: string,
     current: boolean,
     company: string,
 }
 
-const TimelineEvent = ({title, fromYear, fromMonth, toYear, toMonth, description, current=false, company}: Props) => {
+const TimelineEvent = ({title, fromYear, fromMonth, toYear, toMonth, current=false, company}: Props) => {
     return (
-        <div className="flex font-oswald">
-            <div className="inset-0 hidden md:flex">
-                <svg width="38" height="247" viewBox="0 0 38 247" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 0L18.9997 247" stroke="white" strokeWidth="3"/>
-                    <circle cx="19" cy="61" r="12" fill="#991b1b" stroke="white" strokeWidth="7"/>
-                </svg>
+        <>
+        <div className="flex flex-col md:flex-row font-oswald h-fit md:h-32 md:min-w-full justify-start items-start">
+            <div className="hidden md:flex items-start">
+                <img src={verticalTimeline} />
             </div>
-            <div className="inset-0 flex md:hidden">
-                <svg width="38" height="180" viewBox="0 0 38 247" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 0L18.9997 247" stroke="white" strokeWidth="3"/>
-                    <circle cx="19" cy="61" r="12" fill="#991b1b" stroke="white" strokeWidth="7"/>
-                </svg>
+            <div className="flex flex-row md:hidden">
+                <img src={horizontalTimeline} />
             </div>
-            <div className="flex-col bg-white/20 m-10 rounded-md min-w-96 px-4 py-2">
-                <div>
+            <div className="flex flex-col bg-white/20 ml-4 md:m-10 rounded-md px-4 py-2 h-24 w-48 md:w-full justify-center">
+                <div className="text-xs lg:text-sm">
                     {fromYear}.{fromMonth} {current? "- current" : `- ${toYear}.${toMonth}`}
                 </div>
-                <div>
+                <div className="text-sm lg:text-lg font-bold">
                     {title}
                 </div>
-                <div>
+                <div className="text-xs lg:text-sm">
                     {company}
-                </div>
-                <div>
-                    {description}
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
